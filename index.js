@@ -14,7 +14,9 @@ app.listen(8080, ()=>{
 import { MongoClient, ObjectId } from "mongodb";
 import cors from "cors"
 //const uri = "mongodb://127.0.0.1:27017"
-const uri = "mongodb+srv://varshiinii:Varshin!23@cluster0.zjqfg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const usr = encodeURIComponent("varshiinii")
+const pwd = encodeURIComponent("Varshin!23")
+const uri = "mongodb+srv://${usr}:${pwd}@cluster0.zjqfg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 const client = new MongoClient(uri)
 const db = client.db("ecomm1")
 
